@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Tabla de multiplicar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center">
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">No.</ion-label>
+      <ion-input type="number" [(ngModel)]="num" (keyup)="ocultar()"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="multiplicar()" expand="block" fill="clear" shape="round">Aceptar</ion-button>
+
+    <ng-template [ngIf]="show">
+      <ion-label class="ion-text-center">Tabla de multiplicar del {{ num }}</ion-label>
+      <ion-item class="ion-text-center" *ngFor="let item of tabla; index as i;">
+        <ion-label>{{ num }} * {{ i }} = {{ item }}</ion-label>
+      </ion-item>
+    </ng-template>
+  </ion-list>
+</ion-content>

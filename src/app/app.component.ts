@@ -5,14 +5,17 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+
+  public nameApp = 'Ionic App';
+  public subtitleApp = 'Introduction to Ionic';
+
   public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'Inicio', url: '/inicio', icon: 'home' },
+    { title: 'Sumadora', url: '/sumadora', icon: 'calculator' },
+    { title: 'Traductor de No', url: '/numeros-letras', icon: 'repeat' },
+    { title: 'Tabla de multiplicar', url: '/tabla-multi', icon: 'math' },
+    { title: 'Experiencia', url: '/experiencia', icon: 'play' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+
   constructor() {}
 }
